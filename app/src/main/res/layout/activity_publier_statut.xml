@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="Ecrivez votre statut"
+            android:id="@+id/statut_added"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_camera"
+                android:id="@+id/add_pic"
+                android:clickable="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_action_video"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_video"
+                android:clickable="true"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:id="@+id/publier"
+                android:text="Publier"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingRight="15dp"
+                android:background="@drawable/selector_card_background"
+                android:baselineAligned="false">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:src="@drawable/un"
+                        android:layout_height="50dp"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+                        <TextView
+                            android:id="@+id/user"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/f"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"/>
+                        <TextView
+                            android:id="@+id/time"
+                            android:textSize="14dp"
+                            android:textStyle="italic"
+                            android:textColor="@color/gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"/>
+                    </LinearLayout>
+                    <View android:layout_width="0dp"
+                          android:layout_height="fill_parent"
+                          android:layout_weight="1" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/menu"
+                        android:clickable="true"
+                        android:src="@drawable/navigation_expand"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:id="@+id/pic"
+                    android:layout_height="wrap_content"/>
+                <VideoView
+                    android:focusable="false"
+                    android:id="@+id/video_view"
+                    android:layout_gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="500dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/rating_good"
+                        android:id="@+id/jaime"/>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:src="@drawable/social_chat"
+                        android:layout_height="50dp"
+                        android:id="@+id/commenter"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Saisir le commentaire"
+                        android:id="@+id/commentaire">
+                    </EditText>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

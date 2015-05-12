@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">ESI Life</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="navigation_drawer_items_array">
+        <item>Events</item>
+        <item>Filter By Category</item>
+        <item>Filter By Time</item>
+        <item>Filter By Likes</item>
+        <item>Filter By Date</item>
+        <item>Settings</item>
+    </string-array>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="server_client_id"></string>
+
+    <string name="list_moments_title">Touch a moment to delete</string>
+    <string name="send_interactive_button_name">Send Interactive Post</string>
+    <string name="sign_in_profile_label">profile scope</string>
+    <string name="sign_out_button_name">Sign out</string>
+    <string name="revoke_access_button_name">Revoke access</string>
+    <string name="server_auth_code_required_label">Reset server auth code state</string>
+    <string name="share_title">Prefill Text (optional)</string>
+    <string name="share_prefill_text">Welcome to the Google+ platform.</string>
+
+    <string name="default_status"/>
+    <string name="greeting_status">Welcome, %s.</string>
+    <string name="greeting_status_sign_in_required">Sign-in required</string>
+    <string name="greeting_status_error">Error signing in: %s.</string>
+    <string name="loading_status">Loading…</string>
+    <string name="signing_in_status">Signing in with Google+.</string>
+    <string name="signed_in_status">Signed in as \"%s\".</string>
+
+    <!-- Used if there was an error loading the signed in user's name. -->
+    <string name="unknown_person">Unknown</string>
+    <string name="signed_out_status">Signed out.</string>
+    <string name="sign_in_error_status">Error signing in.</string>
+    <string name="revoke_access_status">Revoked access.</string>
+    <string name="revoke_access_error_status">Unable to revoke access.</string>
+
+    <string name="plus_write_moment_status">Saving moment</string>
+    <string name="plus_write_moment_status_success">Write moment succeeded</string>
+    <string name="plus_write_moment_status_cached">Write moment cached</string>
+    <string name="plus_write_moment_status_auth_error">Sign in is required</string>
+    <string name="plus_write_moment_status_error">Internal error</string>
+
+    <string name="plus_remove_moment_status">Removing moment</string>
+
+    <string name="plus_one_small_name">Small +1 button</string>
+    <string name="plus_one_medium_name">Medium +1 button</string>
+    <string name="plus_one_tall_name">Tall +1 button</string>
+    <string name="plus_one_standard_name">Standard +1 button</string>
+    <string name="plus_one_standard_ann_name">Standard +1 button (with inline annotation)</string>
+
+    <string name="plus_example_deep_link_id">/+/mobile/android/</string>
+    <string name="plus_example_deep_link_url">
+        https://developers.google.com/+/mobile/android/
+    </string>
+    <string name="plus_generic_error">Sign in with Google is not available.</string>
+    <string name="progress_message">Signing in to Google&#8230;</string>
+
+    <string name="offline_access_disabled">Offline access emulation disabled: set the server client
+        ID in strings.xml for offline access</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_add_status">AddStatusActivity</string>
+</resources>
