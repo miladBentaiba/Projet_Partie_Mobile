@@ -37,15 +37,15 @@ public class MainActivity extends ActionBarActivity {
     //First We Declare Titles And Icons For Our Navigation Drawer List View
     //This Icons And Titles Are holded in an Array as you can see
 
-    String TITLES[] = {"Home","Events","Mail","Shop","Travel"};
-    int ICONS[] = {R.drawable.ic_action_camera,R.drawable.ic_action_video,R.drawable.ic_plusone_tall_off_client,R.drawable.ic_action_camera,R.drawable.ic_action_camera};
+    String TITLES[] = {"Filtrer par Likes","Filtrer par date","Filtrer par suivis","Filtrer par catégorie","Filtres avancés"};
+    int ICONS[] = {R.drawable.ic_favorite_24,R.drawable.ic_schedule_24,R.drawable.ic_people_outline_24,R.drawable.ic_speaker_notes_24,R.drawable.ic_storage_24};
 
     //Similarly we Create a String Resource for the name and email in the header view
     //And we also create a int resource for profile picture in the header view
 
     String NAME = "Habchi Sarah";
     String EMAIL = "bs_habchi@esi.dz";
-    int PROFILE = R.drawable.sarah;
+    int PROFILE = R.drawable.sarah_small;
 
     RecyclerView mRecyclerView;                           // Declaring RecyclerView
     RecyclerView.Adapter mAdapter;                        // Declaring Adapter For Recycler View
@@ -67,23 +67,6 @@ public class MainActivity extends ActionBarActivity {
         toolbar.setLogo(R.drawable.ic_announcement_white_48dp);
         toolbar.setTitleTextColor(getResources().getColor(R.color.tabscolor));
         setSupportActionBar(toolbar);
-
-        //Populating the drawer
-    /*    mNavigationDrawerItemTitles= getResources().getStringArray(R.array.navigation_drawer_items_array);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
-        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[3];
-
-        drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_announcement_white_48dp, "Create");
-        drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_announcement_white_48dp, "Read");
-        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_announcement_white_48dp, "Help");
-
-        DrawerItemCustomAdapter Aadapter = new DrawerItemCustomAdapter(this, R.layout.listview_item_row, drawerItem);
-
-        mDrawerList.setAdapter(Aadapter);
-*/
-
 
 
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
@@ -111,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
 
         //Customizing the FAB
         ActionButton actionButton = (ActionButton) findViewById(R.id.action_button);
-        actionButton.setButtonColor(getResources().getColor(R.color.fab_material_pink_500));
+        actionButton.setButtonColor(getResources().getColor(R.color.ColorPrimary));
 
         // To set the shadow color:
         actionButton.setShadowColor(getResources().getColor(R.color.fab_material_grey_500));
