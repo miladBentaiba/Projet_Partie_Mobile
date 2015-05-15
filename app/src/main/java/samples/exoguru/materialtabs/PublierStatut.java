@@ -29,7 +29,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 
-public class Publier_statut extends ActionBarActivity {
+public class PublierStatut extends ActionBarActivity {
 
     ImageView img ;
     ImageView add_video;
@@ -59,8 +59,8 @@ public class Publier_statut extends ActionBarActivity {
                 Intent pickIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 pickIntent.setType("video/*");
                 startActivityForResult(pickIntent, 3);
-                Publier_statut.this.img.setVisibility(View.GONE);
-                Publier_statut.this.video.setVisibility(View.VISIBLE);
+                PublierStatut.this.img.setVisibility(View.GONE);
+                PublierStatut.this.video.setVisibility(View.VISIBLE);
 
             }
         });
@@ -86,7 +86,7 @@ public class Publier_statut extends ActionBarActivity {
         textAPublier.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction (TextView v, int actionId, KeyEvent event) {
-                Publier_statut.this.contenu.setText(textAPublier.getText().toString());
+                PublierStatut.this.contenu.setText(textAPublier.getText().toString());
                 return false;
             }
         });
@@ -97,7 +97,7 @@ public class Publier_statut extends ActionBarActivity {
 
         final CharSequence[] options = { "Take Photo", "Choose from Gallery","Cancel" };
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(Publier_statut.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(PublierStatut.this);
         builder.setTitle("Add Photo!");
         builder.setItems(options, new DialogInterface.OnClickListener() {
             @Override
@@ -108,14 +108,14 @@ public class Publier_statut extends ActionBarActivity {
                     File f = new File(Environment.getExternalStorageDirectory(), "temp.jpg");
                     intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
                     startActivityForResult(intent, 1);
-                    Publier_statut.this.video.setVisibility(View.GONE);
-                    Publier_statut.this.img.setVisibility(View.VISIBLE);
+                    PublierStatut.this.video.setVisibility(View.GONE);
+                    PublierStatut.this.img.setVisibility(View.VISIBLE);
                 } else if (options[item].equals("Choose from Gallery")) {
                     Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(intent, 2);
                    // Publier_statut.this.add_video.setVisibility(View.GONE);
-                    Publier_statut.this.video.setVisibility(View.GONE);
-                    Publier_statut.this.img.setVisibility(View.VISIBLE);
+                    PublierStatut.this.video.setVisibility(View.GONE);
+                    PublierStatut.this.img.setVisibility(View.VISIBLE);
                 } else if (options[item].equals("Cancel")) {
                     dialog.dismiss();
                 }
