@@ -45,7 +45,7 @@ public class MainActivity extends ActionBarActivity {
 
     String NAME = "Habchi Sarah";
     String EMAIL = "bs_habchi@esi.dz";
-    int PROFILE = R.drawable.sarah;
+    int PROFILE = R.drawable.deux;
 
     RecyclerView mRecyclerView;                           // Declaring RecyclerView
     RecyclerView.Adapter mAdapter;                        // Declaring Adapter For Recycler View

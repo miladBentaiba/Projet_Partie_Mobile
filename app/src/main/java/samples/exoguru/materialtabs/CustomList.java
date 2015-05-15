@@ -1,9 +1,9 @@
 package samples.exoguru.materialtabs;
 
+
 /**
  * Created by Milada on 01/05/2015.
  */
-
 import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
@@ -14,31 +14,28 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
-
+import android.widget.MediaController;
 import java.util.ArrayList;
 
-public class CustomList extends ArrayAdapter<String> {
+public class CustomList extends ArrayAdapter<String>  {
 
     private final String[] web;
     private final Integer[] image;
-    private VideoView myVideoView;
     private MediaController mediaControls;
-    private int posity = -1;
     //EditText
     ArrayList<String> myItems = new ArrayList<>();
     private LayoutInflater mInflater;
 
     public CustomList(Activity context,
-                      String[] web, Integer[] image) {
-       super(context, R.layout.list_item_card, web);
+                      String[] data, Integer[] image) {
+        super(context, R.layout.list_item_card, data);
         mInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        this.web = web;
+        this.web = data;
         this.image =image;
 
-        for (int i=0; i<web.length; i++)
+        for (int i=0; i<data.length; i++)
         {
             myItems.add("");
         }
@@ -48,10 +45,25 @@ public class CustomList extends ArrayAdapter<String> {
         return myItems.size();
     }
 
-   class ViewHolder {
-       EditText caption;
-   }
+    /*@Override
+    public int getItemViewType(int position) {
+        return position;
+    }
 
+    @Override
+    public int getViewTypeCount() {
+        return 500;
+    }*/
+
+    class ViewHolder {
+        EditText commentaire;
+        TextView nom_user;
+        TextView time;
+        TextView publication;
+        ImageView menu;
+        VideoView myVideoView;
+        ImageView img;
+    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -60,31 +72,31 @@ public class CustomList extends ArrayAdapter<String> {
         {
             holder = new ViewHolder();
             convertView = mInflater.inflate(R.layout.list_item_card, null);
-            holder.caption = (EditText) convertView.findViewById(R.id.commentaire);
-            TextView txtTitle1 = (TextView) convertView.findViewById(R.id.text1);
-            TextView txtTitle2 = (TextView) convertView.findViewById(R.id.text2);
-            TextView txtTitle3 = (TextView) convertView.findViewById(R.id.text3);
-            ImageView menu = (ImageView) convertView.findViewById(R.id.menu);
-            myVideoView = (VideoView) convertView.findViewById(R.id.video_view);
-            ImageView img = (ImageView)convertView.findViewById(R.id.images);
-            txtTitle1.setText(web[position]);
-            txtTitle2.setText(web[position]);
-            txtTitle3.setText(web[position]);
-            menu.setOnClickListener(new OnAlbumOverflowSelectedListener(getContext()));
-            img.setImageResource(image[position]);
-            if(position==2)
+            holder.commentaire = (EditText) convertView.findViewById(R.id.commentaire);
+            holder.nom_user = (TextView) convertView.findViewById(R.id.user);
+            holder.time = (TextView) convertView.findViewById(R.id.time);
+            holder.publication = (TextView) convertView.findViewById(R.id.text);
+            holder.menu = (ImageView) convertView.findViewById(R.id.menu);
+            holder.myVideoView = (VideoView) convertView.findViewById(R.id.video_view);
+            holder.img = (ImageView)convertView.findViewById(R.id.images);
+            holder.nom_user.setText(web[position]);
+            holder.time.setText(web[position]);
+            holder.publication.setText(web[position]);
+            holder.menu.setOnClickListener(new OnAlbumOverflowSelectedListener(getContext()));
+            holder.img.setImageResource(image[position]);
+            if (mediaControls == null) {
+                mediaControls = new MediaController(convertView.getContext());
+            }
+            holder.myVideoView.setMediaController(mediaControls);
+            if(position==1)
             {
-                img.setVisibility(View.GONE);
+                holder.img.setVisibility(View.GONE);
                 //set the media controller buttons
-                if (mediaControls == null) {
-                    mediaControls = new MediaController(convertView.getContext());
-                }
+
                 //initialize the VideoView
                 try {
-                    //set the media controller in the VideoView
-                    myVideoView.setMediaController(mediaControls);
-                    //set the uri of the video to be played
-                    myVideoView.setVideoURI(Uri.parse("android.resource://" +
+                    //set the uri of the add_video to be played
+                    holder.myVideoView.setVideoURI(Uri.parse("android.resource://" +
                             convertView.getContext().getPackageName() + "/" + R.raw.avion));
                 } catch (Exception e) {
                     Log.e("Error", e.getMessage());
@@ -93,7 +105,7 @@ public class CustomList extends ArrayAdapter<String> {
             }
             else
             {
-                myVideoView.setVisibility(View.GONE);
+                holder.myVideoView.setVisibility(View.GONE);
             }
             convertView.setTag(holder);
         }
@@ -102,13 +114,15 @@ public class CustomList extends ArrayAdapter<String> {
             holder = (ViewHolder) convertView.getTag();
         }
         //Fill EditText with the value you have in data source
-        holder.caption.setText("");
-        holder.caption.setId(position);
+        holder.commentaire.setText("");
+        holder.commentaire.setId(position);
+
+
 
         //we need to update adapter once we finish with editing
-        holder.caption.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (!hasFocus){
+        holder.commentaire.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            public void onFocusChange (View v, boolean hasFocus) {
+                if (!hasFocus) {
                     final int position = v.getId();
                     final EditText Caption = (EditText) v;
                     web[position] = Caption.getText().toString();

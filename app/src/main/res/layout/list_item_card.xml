@@ -30,14 +30,14 @@
                 android:orientation="vertical"
                 android:layout_margin="10dp">
                 <TextView
-                    android:id="@+id/text1"
+                    android:id="@+id/user"
                     android:textSize="18dp"
                     android:textStyle="bold"
                     android:textColor="@color/f"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"/>
                 <TextView
-                    android:id="@+id/text2"
+                    android:id="@+id/time"
                     android:textSize="14dp"
                     android:textStyle="italic"
                     android:textColor="@color/gray"
@@ -56,7 +56,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/text3"
+            android:id="@+id/text"
             android:textSize="18dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -71,7 +71,7 @@
             android:layout_gravity="center"
             android:layout_width="fill_parent"
             android:layout_height="500dp"/>
-        
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="1dp"/>
