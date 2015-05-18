@@ -61,9 +61,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.NAME = User.getInstance().getName();
-        this.EMAIL = User.getInstance().getMail();
-        this.imgURL = User.getInstance().getImageUrl();
+        User user = User.createInstance("","","","","") ;
+        this.NAME = user.getName();
+        this.EMAIL = user.getInstance().getMail();
+        this.imgURL = user.getImageUrl();
 
         // Creating The Toolbar and setting it as the Toolbar for the activity
 
@@ -114,7 +115,7 @@ public class MainActivity extends ActionBarActivity {
         actionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this , Publier_statut.class);
+                Intent intent = new Intent(MainActivity.this , PublierStatut.class);
                 startActivity(intent) ;
             }
         });
@@ -183,7 +184,7 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(this, Publier_statut.class);
+            Intent intent = new Intent(this, PublierStatut.class);
             startActivity(intent);
             return true;
         }

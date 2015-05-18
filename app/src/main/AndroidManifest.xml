@@ -32,13 +32,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".AddStatusActivity"
-            android:label="@string/title_activity_add_status" >
-        </activity>
+
 
         <activity
-            android:name=".Publier_statut"
+            android:name=".PublierStatut"
             android:label="Publier Statut" >
         </activity>
     </application>
