@@ -26,8 +26,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.Result;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Scope;
-import com.google.android.gms.common.api.Status;
-import com.google.android.gms.location.places.personalized.PlaceUserData;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 
@@ -41,23 +39,17 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -89,11 +81,11 @@ public class WelcomeActivity extends Activity implements OnClickListener,
     private static final String KEY_NEW_CODE_REQUIRED = "codeRequired";
     private boolean mGlobalChoice =true ;
     private ImageView imgProfilePic;
-    private TextView mSignInStatus;
+
     private GoogleApiClient mGoogleApiClient;
     private SignInButton mSignInButton;
 
-    private View mServerAuthCodeResetButton;
+
 
 
 
@@ -132,44 +124,36 @@ public class WelcomeActivity extends Activity implements OnClickListener,
         // adb shell setprop log.tag.SignInActivity VERBOSE
 
         // Set the backgroundImage
-        Bitmap icon = BitmapFactory.decodeResource(this.getResources(),
-                R.drawable.backwelcome);
-        Bitmap back = BlurBuilder.blur(this , icon);
 
-        View v  = findViewById(R.id.mainLayout);
-        v.setBackground(new BitmapDrawable(this.getResources(), back));
 
         mIsLogVerbose = Log.isLoggable(TAG, Log.VERBOSE);
 
         setContentView(R.layout.activity_welcome);
         restoreState(savedInstanceState);
+        Bitmap icon = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.backgrad);
+        Bitmap back = BlurBuilder.blur(this , icon);
 
+        View v  = findViewById(R.id.mainLayout);
+        v.setBackground(new BitmapDrawable(this.getResources(), back));
         logVerbose("Activity onCreate, creating new GoogleApiClient");
 
         mGoogleApiClient = buildGoogleApiClient(false);
 
-        mSignInStatus = (TextView) findViewById(R.id.sign_in_status);
+
         mSignInButton = (SignInButton) findViewById(R.id.sign_in_button);
         mSignInButton.setOnClickListener(this);
 
-        mServerAuthCodeResetButton = findViewById(R.id.server_auth_code_reset_button);
-        mServerAuthCodeResetButton.setOnClickListener(this);
-        if (!isUsingOfflineAccess()) {
-            mServerAuthCodeResetButton.setVisibility(View.GONE);
-        } else {
-
-            mServerAuthCodeResetButton.setVisibility(View.VISIBLE);
-        }
 
 
 
 /** A verifier  **/
-                mGoogleApiClient.disconnect();
-                // Since we changed the configuration, the cached connection result is no longer
-                // valid.
-                mConnectionResult = null;
-                mGoogleApiClient = buildGoogleApiClient(mGlobalChoice);
-                mGoogleApiClient.connect();
+        mGoogleApiClient.disconnect();
+        // Since we changed the configuration, the cached connection result is no longer
+        // valid.
+        mConnectionResult = null;
+        mGoogleApiClient = buildGoogleApiClient(mGlobalChoice);
+        mGoogleApiClient.connect();
 
 
 
@@ -246,7 +230,7 @@ public class WelcomeActivity extends Activity implements OnClickListener,
                     }
 
                     mSignInClicked = true;
-                    mSignInStatus.setText(getString(R.string.signing_in_status));
+
                     resolveSignInError();
                 }
                 break;
@@ -298,9 +282,7 @@ public class WelcomeActivity extends Activity implements OnClickListener,
                 mSignInClicked = false; // No longer in the middle of resolving sign-in errors.
 
                 if (resultCode == RESULT_CANCELED) {
-                    mSignInStatus.setText(getString(R.string.signed_out_status));
                 } else {
-                    mSignInStatus.setText(getString(R.string.sign_in_error_status));
                     Log.w(TAG, "Error during resolving recoverable error.");
                 }
             }
@@ -340,7 +322,7 @@ public class WelcomeActivity extends Activity implements OnClickListener,
         String currentPersonName = person != null
                 ? person.getDisplayName()
                 : getString(R.string.unknown_person);
-        mSignInStatus.setText(getString(R.string.signed_in_status, currentPersonName  ));
+
         updateButtons(true /* isSignedIn */);
         mSignInClicked = false;
         System.out.println("Allo winek 2");
@@ -357,19 +339,19 @@ public class WelcomeActivity extends Activity implements OnClickListener,
                             "oauth2:" + SCOPES);
                 } catch (IOException transientEx) {
                     // Network or server error, try later
-                 //   Toast.makeText(WelcomeActivity.this,"le token est : "+transientEx.toString() ,Toast.LENGTH_LONG).show();
+                    //   Toast.makeText(WelcomeActivity.this,"le token est : "+transientEx.toString() ,Toast.LENGTH_LONG).show();
                     Log.e(TAG, transientEx.toString());
                 } catch (UserRecoverableAuthException e) {
                     // Recover (with e.getIntent())
                     Log.e(TAG, e.toString());
-                   // Toast.makeText(WelcomeActivity.this,"le token est : "+e.toString() ,Toast.LENGTH_LONG).show();
+                    // Toast.makeText(WelcomeActivity.this,"le token est : "+e.toString() ,Toast.LENGTH_LONG).show();
                   /*  Intent recover = e.getIntent();
                     startActivityForResult(recover, REQUEST_CODE_TOKEN_AUTH);*/
                 } catch (GoogleAuthException authEx) {
                     // The call is not ever expected to succeed
                     // assuming you have already verified that
                     // Google Play services is installed.
-                  //  Toast.makeText(WelcomeActivity.this,"le token est : "+authEx.toString() ,Toast.LENGTH_LONG).show();
+                    //  Toast.makeText(WelcomeActivity.this,"le token est : "+authEx.toString() ,Toast.LENGTH_LONG).show();
                     Log.e(TAG, authEx.toString());
                 }
 
@@ -393,7 +375,6 @@ public class WelcomeActivity extends Activity implements OnClickListener,
     @Override
     public void onConnectionSuspended(int cause) {
         logVerbose("GoogleApiClient onConnectionSuspended");
-        mSignInStatus.setText(R.string.loading_status);
         mGoogleApiClient.connect();
         updateButtons(false /* isSignedIn */);
     }
@@ -423,11 +404,11 @@ public class WelcomeActivity extends Activity implements OnClickListener,
             if (mConnectionResult == null) {
                 // Disable the sign-in button until onConnectionFailed is called with result.
                 mSignInButton.setVisibility(View.INVISIBLE);
-                mSignInStatus.setText(getString(R.string.loading_status));
+
             } else {
                 // Enable the sign-in button since a connection result is available.
                 mSignInButton.setVisibility(View.VISIBLE);
-                mSignInStatus.setText(getString(R.string.signed_out_status));
+
             }
 
 
@@ -477,13 +458,13 @@ public class WelcomeActivity extends Activity implements OnClickListener,
         String currentPersonName = person != null
                 ? person.getDisplayName()
                 : getString(R.string.unknown_person);
-       String mAccName =Plus.AccountApi.getAccountName(mGoogleApiClient);
+        String mAccName =Plus.AccountApi.getAccountName(mGoogleApiClient);
         if (person != null) {
             String personPhotoUrl = person.getImage().getUrl();
             String ID  = person.getId();
             User.createInstance(ID,currentPersonName,mAccName,personPhotoUrl,TOKEN);
-             }
-        mSignInStatus.setText(getString(R.string.signed_in_status, currentPersonName + " " + mAccName));
+        }
+
         updateButtons(true /* isSignedIn */);
         mSignInClicked = false;
         System.out.println("Allo winek ");
