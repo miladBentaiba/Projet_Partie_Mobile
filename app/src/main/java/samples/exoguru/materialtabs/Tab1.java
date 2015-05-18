@@ -35,12 +35,12 @@ public class Tab1 extends Fragment {
             R.drawable.rating_good,
             R.drawable.navigation_expand
     };
+    CustomList adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.tab_1,container,false);
-        CustomList adapter = new
-                CustomList(this.getActivity(), web, image);
+        adapter = new CustomList(this.getActivity(), web, image);
         list=(ListView)v.findViewById(R.id.list);
         list.setClickable(true);
         list.addHeaderView(new View(this.getActivity()));
