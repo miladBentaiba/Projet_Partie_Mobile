@@ -18,6 +18,8 @@ import android.widget.ListView;
 
 import com.software.shell.fab.ActionButton;
 
+import samples.exoguru.materialtabs.UserSession.User;
+
 /**
  * Created by Edwin on 15/02/2015.
  */
@@ -46,6 +48,7 @@ public class MainActivity extends ActionBarActivity {
     String NAME = "Habchi Sarah";
     String EMAIL = "bs_habchi@esi.dz";
     int PROFILE = R.drawable.sarah_small;
+    String imgURL ;
 
     RecyclerView mRecyclerView;                           // Declaring RecyclerView
     RecyclerView.Adapter mAdapter;                        // Declaring Adapter For Recycler View
@@ -58,13 +61,15 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        this.NAME = User.getInstance().getName();
+        this.EMAIL = User.getInstance().getMail();
+        this.imgURL = User.getInstance().getImageUrl();
 
         // Creating The Toolbar and setting it as the Toolbar for the activity
 
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         toolbar.setNavigationIcon(R.drawable.ic_announcement_white_48dp);
-        toolbar.setLogo(R.drawable.ic_announcement_white_48dp);
+        toolbar.setLogo(R.drawable.school);
         toolbar.setTitleTextColor(getResources().getColor(R.color.tabscolor));
         setSupportActionBar(toolbar);
 
@@ -109,8 +114,8 @@ public class MainActivity extends ActionBarActivity {
         actionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent intent = new Intent(MainActivity.this , AddStatusActivity.class);
-               // startActivity(intent) ;
+                Intent intent = new Intent(MainActivity.this , Publier_statut.class);
+                startActivity(intent) ;
             }
         });
 
@@ -123,7 +128,7 @@ public class MainActivity extends ActionBarActivity {
 
         mRecyclerView.setHasFixedSize(true);                            // Letting the system know that the list objects are of fixed size
 
-        mAdapter = new MyAdapter(TITLES,ICONS,NAME,EMAIL,PROFILE);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
+        mAdapter = new MyAdapter(TITLES,ICONS,NAME,EMAIL,imgURL);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
         // And passing the titles,icons,header view name, header view email,
         // and header view profile picture
 

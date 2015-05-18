@@ -3,13 +3,19 @@ package samples.exoguru.materialtabs;
 /**
  * Created by Sarra on 12/05/2015.
  */
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.InputStream;
 
 /**
  * Created by hp1 on 28-12-2014.
@@ -25,6 +31,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     private String name;        //String Resource for header View Name
     private int profile;        //int Resource for header view profile picture
+    private String imgURL ;
     private String email;       //String Resource for header view email
 
 
@@ -67,14 +74,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
 
-    MyAdapter(String Titles[],int Icons[],String Name,String Email, int Profile){ // MyAdapter Constructor with titles and icons parameter
+    MyAdapter(String Titles[],int Icons[],String Name,String Email, String url){ // MyAdapter Constructor with titles and icons parameter
         // titles, icons, name, email, profile pic are passed from the main activity as we
         mNavTitles = Titles;                //have seen earlier
         mIcons = Icons;
         name = Name;
         email = Email;
-        profile = Profile;                     //here we assign those passed values to the values we declared here
+       // profile = Profile;                     //here we assign those passed values to the values we declared here
         //in adapter
+        imgURL = url ;
 
 
 
@@ -124,10 +132,38 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             holder.imageView.setImageResource(mIcons[position -1]);// Settimg the image with array of our icons
         }
         else{
-
+            new LoadProfileImage(holder.profile).execute(imgURL);
             holder.profile.setImageResource(profile);           // Similarly we set the resources for header view
             holder.Name.setText(name);
             holder.email.setText(email);
+        }
+    }
+
+
+
+    //new LoadProfileImage(imgProfilePic).execute(personPhotoUrl);
+    private class LoadProfileImage extends AsyncTask<String, Void, Bitmap> {
+        ImageView bmImage;
+
+        public LoadProfileImage(ImageView bmImage) {
+            this.bmImage = bmImage;
+        }
+
+        protected Bitmap doInBackground(String... urls) {
+            String urldisplay = urls[0];
+            Bitmap mIcon11 = null;
+            try {
+                InputStream in = new java.net.URL(urldisplay).openStream();
+                mIcon11 = BitmapFactory.decodeStream(in);
+            } catch (Exception e) {
+                Log.e("Error", e.getMessage());
+                e.printStackTrace();
+            }
+            return mIcon11;
+        }
+
+        protected void onPostExecute(Bitmap result) {
+            bmImage.setImageBitmap(result);
         }
     }
 

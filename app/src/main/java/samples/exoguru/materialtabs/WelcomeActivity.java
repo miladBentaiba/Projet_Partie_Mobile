@@ -37,6 +37,9 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -47,15 +50,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
+
+import samples.exoguru.materialtabs.UserSession.User;
 
 public class WelcomeActivity extends Activity implements OnClickListener,
         GoogleApiClient.ConnectionCallbacks,
@@ -81,7 +88,7 @@ public class WelcomeActivity extends Activity implements OnClickListener,
 
     private static final String KEY_NEW_CODE_REQUIRED = "codeRequired";
     private boolean mGlobalChoice =true ;
-
+    private ImageView imgProfilePic;
     private TextView mSignInStatus;
     private GoogleApiClient mGoogleApiClient;
     private SignInButton mSignInButton;
@@ -123,6 +130,15 @@ public class WelcomeActivity extends Activity implements OnClickListener,
         // If you want to understand the life cycle more, you can use below command to turn on
         // verbose logging for this Activity on your testing device:
         // adb shell setprop log.tag.SignInActivity VERBOSE
+
+        // Set the backgroundImage
+        Bitmap icon = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.backwelcome);
+        Bitmap back = BlurBuilder.blur(this , icon);
+
+        View v  = findViewById(R.id.mainLayout);
+        v.setBackground(new BitmapDrawable(this.getResources(), back));
+
         mIsLogVerbose = Log.isLoggable(TAG, Log.VERBOSE);
 
         setContentView(R.layout.activity_welcome);
@@ -181,7 +197,8 @@ public class WelcomeActivity extends Activity implements OnClickListener,
 
         if (useProfileScope) {
             builder.addApi(Plus.API)
-                    .addScope(Plus.SCOPE_PLUS_LOGIN);
+                    .addScope(Plus.SCOPE_PLUS_LOGIN).addScope(Plus.SCOPE_PLUS_PROFILE);
+
         } else {
             builder.addApi(Plus.API, Plus.PlusOptions.builder()
                     .addActivityTypes(MomentUtil.ACTIONS).build())
@@ -364,6 +381,9 @@ public class WelcomeActivity extends Activity implements OnClickListener,
                 Toast.makeText(WelcomeActivity.this,"le token est : "+token ,Toast.LENGTH_LONG).show();
 
                 Log.i(TAG, "Access token retrieved:" + token);
+
+                //Send the token
+
             }
 
         };
@@ -458,10 +478,22 @@ public class WelcomeActivity extends Activity implements OnClickListener,
                 ? person.getDisplayName()
                 : getString(R.string.unknown_person);
        String mAccName =Plus.AccountApi.getAccountName(mGoogleApiClient);
+        if (person != null) {
+            String personPhotoUrl = person.getImage().getUrl();
+            String ID  = person.getId();
+            User.createInstance(ID,currentPersonName,mAccName,personPhotoUrl,TOKEN);
+             }
         mSignInStatus.setText(getString(R.string.signed_in_status, currentPersonName + " " + mAccName));
         updateButtons(true /* isSignedIn */);
         mSignInClicked = false;
         System.out.println("Allo winek ");
+        Intent i  = new Intent(this , MainActivity.class);
+        startActivity(i);
 
     }
+
+
+
+
+
 }
