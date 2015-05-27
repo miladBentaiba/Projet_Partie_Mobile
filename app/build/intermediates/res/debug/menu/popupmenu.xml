@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/album_overflow_rename"
+        android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        android:title="Suivre utiliateur" />
+
+    <item
+        android:id="@+id/album_overflow_lock"
+        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+        android:title="lock" />
+
+    <item
+        android:id="@+id/album_overflow_unlock"
+        android:icon="@drawable/abc_btn_radio_to_on_mtrl_015"
+        android:title="unlock" />
+
+    <item
+        android:id="@+id/album_overflow_delete"
+        android:icon="@drawable/abc_ic_menu_cut_mtrl_alpha"
+        android:title="delete" />
+
+    <item
+        android:id="@+id/album_overflow_set_cover"
+        android:icon="@drawable/abc_btn_radio_to_on_mtrl_015"
+        android:title="set_cover" />
+
+</menu><!-- From: file:/C:/Users/Milada/Desktop/Projet_Git/Projet-mobile/app/src/main/res/menu/popupmenu.xml -->

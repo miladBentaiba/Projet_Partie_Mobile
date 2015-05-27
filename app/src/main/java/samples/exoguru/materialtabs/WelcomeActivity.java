@@ -69,7 +69,8 @@ public class WelcomeActivity extends Activity implements OnClickListener,
         return TOKEN;
     }
 
-    public static final String SCOPES = "https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile";
+    public static final String SCOPES =
+            "https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile";
 
     private static final String TAG  = "WelcomeActivity";
 
@@ -130,12 +131,12 @@ public class WelcomeActivity extends Activity implements OnClickListener,
 
         setContentView(R.layout.activity_welcome);
         restoreState(savedInstanceState);
-        Bitmap icon = BitmapFactory.decodeResource(this.getResources(),
+    /*    Bitmap icon = BitmapFactory.decodeResource(this.getResources(),
                 R.drawable.backgrad);
         Bitmap back = BlurBuilder.blur(this , icon);
 
         View v  = findViewById(R.id.mainLayout);
-        v.setBackground(new BitmapDrawable(this.getResources(), back));
+        v.setBackground(new BitmapDrawable(this.getResources(), back));*/
         logVerbose("Activity onCreate, creating new GoogleApiClient");
 
         mGoogleApiClient = buildGoogleApiClient(false);

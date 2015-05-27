@@ -26,14 +26,14 @@ public class Tab3 extends Fragment implements IHolder {
             @Override
             public void onClick(View arg0) {
 
-                View parent = this.getView();
+                View parent = getView();
                 Log.w("json", "eta1");
                 EditText txt = (EditText)parent.findViewById(R.id.txtMatricule);
                 Log.w("json", "eta2");
                 String matricule = txt.getText().toString();
                 Log.w("json", "eta3");
                 Reader.action = "poster";
-                new Reader(holder).execute();
+                new Reader(holder).execute(matricule);
                 Log.w("json", "finished");
             }
         });
@@ -43,7 +43,7 @@ public class Tab3 extends Fragment implements IHolder {
             @Override
             public void onClick(View arg0) {
 
-                View parent = this.getView();
+                View parent = getView();
                 Log.w("json", "eta1");
                 EditText txt = (EditText)parent.findViewById(R.id.txtMatricule);
                 Log.w("json", "eta2");
@@ -60,7 +60,7 @@ public class Tab3 extends Fragment implements IHolder {
             @Override
             public void onClick(View arg0) {
 
-                View parent = this.getView();
+                View parent = getView();
                 Log.w("json", "eta1");
                 EditText txt = (EditText)parent.findViewById(R.id.txtMatricule);
                 Log.w("json", "eta2");
@@ -79,7 +79,7 @@ public class Tab3 extends Fragment implements IHolder {
             @Override
             public void onClick(View arg0) {
 
-                View parent = this.getView();
+                View parent = getView();
                 Log.w("modif", "eta1");
                 EditText txt = (EditText)parent.findViewById(R.id.txtMatricule);
                 Log.w("modif", "eta2");

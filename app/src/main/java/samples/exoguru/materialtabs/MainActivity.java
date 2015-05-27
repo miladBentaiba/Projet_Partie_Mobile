@@ -61,7 +61,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        User user = User.createInstance("","","","","") ;
+        User user = User.createInstance("ID","Habchi Sarah","bs_habchi@esi.dz","","") ;
         this.NAME = user.getName();
         this.EMAIL = user.getInstance().getMail();
         this.imgURL = user.getImageUrl();

@@ -4,6 +4,9 @@ package samples.exoguru.materialtabs;
 /**
  * Created by Milada on 01/05/2015.
  */
+/**
+ * Created by Milada on 01/05/2015.
+ */
 import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
@@ -49,7 +52,6 @@ public class CustomList extends ArrayAdapter<String>  {
     public int getItemViewType(int position) {
         return position;
     }
-
     @Override
     public int getViewTypeCount() {
         return 500;
@@ -61,7 +63,7 @@ public class CustomList extends ArrayAdapter<String>  {
         TextView time;
         TextView publication;
         ImageView menu;
-        VideoView myVideoView;
+        //VideoView myVideoView;
         ImageView img;
     }
 
@@ -77,7 +79,7 @@ public class CustomList extends ArrayAdapter<String>  {
             holder.time = (TextView) convertView.findViewById(R.id.time);
             holder.publication = (TextView) convertView.findViewById(R.id.text);
             holder.menu = (ImageView) convertView.findViewById(R.id.menu);
-            holder.myVideoView = (VideoView) convertView.findViewById(R.id.video_view);
+            //holder.myVideoView = (VideoView) convertView.findViewById(R.id.video_view);
             holder.img = (ImageView)convertView.findViewById(R.id.images);
             holder.nom_user.setText(web[position]);
             holder.time.setText(web[position]);
@@ -87,7 +89,7 @@ public class CustomList extends ArrayAdapter<String>  {
             if (mediaControls == null) {
                 mediaControls = new MediaController(convertView.getContext());
             }
-            holder.myVideoView.setMediaController(mediaControls);
+            //holder.myVideoView.setMediaController(mediaControls);
             if(position==1)
             {
                 holder.img.setVisibility(View.GONE);
@@ -96,17 +98,17 @@ public class CustomList extends ArrayAdapter<String>  {
                 //initialize the VideoView
                 try {
                     //set the uri of the add_video to be played
-                    holder.myVideoView.setVideoURI(Uri.parse("android.resource://" +
-                            convertView.getContext().getPackageName() + "/" + R.raw.avion));
+                    /*holder.myVideoView.setVideoURI(Uri.parse("android.resource://" +
+                            convertView.getContext().getPackageName() + "/" + R.raw.avion));*/
                 } catch (Exception e) {
                     Log.e("Error", e.getMessage());
                     e.printStackTrace();
                 }
             }
-            else
+           /* else
             {
                 holder.myVideoView.setVisibility(View.GONE);
-            }
+            }*/
             convertView.setTag(holder);
         }
         else

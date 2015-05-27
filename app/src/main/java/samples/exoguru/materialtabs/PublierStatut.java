@@ -1,5 +1,4 @@
 package samples.exoguru.materialtabs;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -113,7 +112,7 @@ public class PublierStatut extends ActionBarActivity {
                 } else if (options[item].equals("Choose from Gallery")) {
                     Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(intent, 2);
-                   // Publier_statut.this.add_video.setVisibility(View.GONE);
+                    // Publier_statut.this.add_video.setVisibility(View.GONE);
                     PublierStatut.this.video.setVisibility(View.GONE);
                     PublierStatut.this.img.setVisibility(View.VISIBLE);
                 } else if (options[item].equals("Cancel")) {
