@@ -27,23 +27,18 @@ public class OnAlbumOverflowSelectedListener implements View.OnClickListener {
                     case R.id.album_overflow_delete:
                        // deleteAlbum(mAlbum);
                         return true;
-
                     case R.id.album_overflow_rename:
                        // renameAlbum(mAlbum);
                         return true;
-
                     case R.id.album_overflow_lock:
                        // lockAlbum(mAlbum);
                         return true;
-
                     case R.id.album_overflow_unlock:
                        // unlockAlbum(mAlbum);
                         return true;
-
                     case R.id.album_overflow_set_cover:
                       //  setAlbumCover(mAlbum);
                         return true;
-
                     default:
                         return super.onMenuItemSelected(menu, item);
                 }

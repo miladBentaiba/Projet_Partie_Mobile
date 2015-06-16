@@ -34,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/OnAlbumOverflowSelectedListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="29" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="44" />
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#414#415#0" expanded="true" />
@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Commentaires/PostWithComments.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="51" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
+              <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,30 +56,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Commentaire.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Commentaire.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/ServicesPackage/Commentaire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.4516696">
               <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServiceInterface.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/ServicesPackage/ServiceInterface.java">
+      <file leaf-file-name="CustomList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/CustomList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="223" column="0" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#9764#9773#0" expanded="true" />
-                <element signature="e#12060#12069#0" expanded="true" />
-                <element signature="e#14416#14429#0" expanded="true" />
-                <element signature="e#16056#16069#0" expanded="true" />
-                <element signature="e#18341#18342#0" expanded="true" />
-                <element signature="e#18369#18370#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="192" column="20" selection-start-line="192" selection-start-column="20" selection-end-line="192" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1492,7 +1484,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Commentaires/ListCommentaire.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tab_1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_card.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Tab1.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/MyAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/ServicesPackage/Commentaire.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Commentaire.java" />
@@ -1502,11 +1493,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Commentaires/AutoResizeTextView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Commentaires/CustomListCommentaire.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/popupmenu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/OnAlbumOverflowSelectedListener.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_commentaire.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Commentaires/PostWithComments.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/ServicesPackage/ServiceInterface.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/CustomList.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Tab1.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/OnAlbumOverflowSelectedListener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/ServicesPackage/ServiceInterface.java" />
       </list>
     </option>
   </component>
@@ -2205,7 +2197,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44723618" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44723618" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25945538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2319,14 +2311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Tab1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9244288">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Tab2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33391917">
@@ -2393,14 +2377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/popupmenu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_commentaire.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -2428,10 +2404,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Tab1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23901582">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/popupmenu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/OnAlbumOverflowSelectedListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="44" />
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#414#415#0" expanded="true" />
@@ -2440,18 +2432,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/ServicesPackage/Commentaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/Commentaires/PostWithComments.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="51" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
+          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2460,28 +2444,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/CustomList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7205624">
-          <caret line="197" column="11" selection-start-line="197" selection-start-column="11" selection-end-line="197" selection-end-column="11" />
-          <folding>
-            <element signature="e#6715#7438#0" expanded="true" />
-            <element signature="e#7437#7438#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="192" column="20" selection-start-line="192" selection-start-column="20" selection-end-line="192" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/ServicesPackage/ServiceInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="223" column="0" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5888889">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9764#9773#0" expanded="true" />
-            <element signature="e#12060#12069#0" expanded="true" />
-            <element signature="e#14416#14429#0" expanded="true" />
-            <element signature="e#16056#16069#0" expanded="true" />
-            <element signature="e#18341#18342#0" expanded="true" />
-            <element signature="e#18369#18370#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#2009#2010#0" expanded="true" />
+            <element signature="e#2064#2065#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/samples/exoguru/materialtabs/ServicesPackage/Commentaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4516696">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>

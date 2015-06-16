@@ -17,26 +17,7 @@ import samples.exoguru.materialtabs.ServicesPackage.ServiceInterface;
  */
 public class Tab1 extends Fragment {
 
-
     ListView list;
-    String[] web = {
-            "Google Plus",
-            "Twitter",
-            "Windows",
-            "Bing",
-            "Itunes",
-            "Wordpress",
-            "Drupal"
-    } ;
-    Integer[] image ={
-            R.drawable.un,
-            R.drawable.deux,
-            R.drawable.troix,
-            R.drawable.menu,
-            R.drawable.social_chat,
-            R.drawable.rating_good,
-            R.drawable.navigation_expand
-    };
     CustomList adapter;
 
     @Override
@@ -49,13 +30,6 @@ public class Tab1 extends Fragment {
         list.addFooterView(new View(this.getActivity()));
         list.setAdapter(adapter);
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                Toast.makeText(Tab1.this.getActivity(), "You Clicked at " + web[position - 1], Toast.LENGTH_SHORT).show();
-            }
-        });
         return v;
     }
 }
