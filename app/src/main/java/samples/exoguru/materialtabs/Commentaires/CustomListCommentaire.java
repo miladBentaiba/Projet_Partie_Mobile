@@ -11,19 +11,21 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import samples.exoguru.materialtabs.R;
+import java.util.ArrayList;
 
-public class CustomListCommentaire extends ArrayAdapter<String>{
+import samples.exoguru.materialtabs.R;
+import samples.exoguru.materialtabs.ServicesPackage.Commentaire;
+
+public class CustomListCommentaire extends ArrayAdapter<Commentaire>{
 
     private final Activity context;
-    private final String[] web;
-    private final Integer[] imageId;
+    private final ArrayList<Commentaire> coms;
     public CustomListCommentaire(Activity context,
-                      String[] web, Integer[] imageId) {
-        super(context, R.layout.list_commentaire, web);
+                      ArrayList<Commentaire> coms) {
+        super(context, R.layout.list_commentaire, coms);
         this.context = context;
-        this.web = web;
-        this.imageId = imageId;
+        this.coms = coms;
+
 
     }
     @Override
@@ -33,9 +35,9 @@ public class CustomListCommentaire extends ArrayAdapter<String>{
         TextView txtTitle = (TextView) rowView.findViewById(R.id.txt);
 
         ImageView imageView = (ImageView) rowView.findViewById(R.id.img);
-        txtTitle.setText(web[position]);
+        txtTitle.setText(coms.get(position).getCommentaire_text());
 
-        imageView.setImageResource(imageId[position]);
+        imageView.setImageResource(R.drawable.un);
         return rowView;
     }
 }

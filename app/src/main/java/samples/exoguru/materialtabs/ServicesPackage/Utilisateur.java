@@ -6,9 +6,9 @@ package samples.exoguru.materialtabs.ServicesPackage;
 public class Utilisateur {
 
     private int utilisateur_cle;
-    private int nom_utilisateur;
+    private String nom_utilisateur;
 
-    public Utilisateur (int utilisateur_cle, int nom_utilisateur) {
+    public Utilisateur (int utilisateur_cle, String nom_utilisateur) {
         this.utilisateur_cle = utilisateur_cle;
         this.nom_utilisateur = nom_utilisateur;
     }
@@ -20,7 +20,7 @@ public class Utilisateur {
         return utilisateur_cle;
     }
 
-    public int getNom_utilisateur () {
+    public String getNom_utilisateur () {
         return nom_utilisateur;
     }
 
@@ -28,7 +28,7 @@ public class Utilisateur {
         this.utilisateur_cle = utilisateur_cle;
     }
 
-    public void setNom_utilisateur (int nom_utilisateur) {
+    public void setNom_utilisateur (String nom_utilisateur) {
         this.nom_utilisateur = nom_utilisateur;
     }
 }

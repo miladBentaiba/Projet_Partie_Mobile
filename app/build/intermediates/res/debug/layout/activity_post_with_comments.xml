@@ -1,19 +1,113 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/selector_card_background"
+            android:baselineAligned="false">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:src="@drawable/un"
+                    android:layout_height="50dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:id="@+id/user"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/ColorPrimaryDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"/>
+                    <TextView
+                        android:id="@+id/time"
+                        android:textSize="14dp"
+                        android:textStyle="italic"
+                        android:textColor="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"/>
+                </LinearLayout>
+                <View android:layout_width="0dp"
+                      android:layout_height="fill_parent"
+                      android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/menu"
+                    android:clickable="true"
+                    android:src="@drawable/navigation_expand"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:id="@+id/images"
+                android:layout_height="wrap_content"/>
+            <VideoView
+                android:focusable="false"
+                android:id="@+id/video_view"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="500dp"/>
+
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context="samples.exoguru.materialtabs.Commentaires.PostWithComments">
+                android:layout_height="1dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
 
-    <fragment
-        android:name="samples.exoguru.materialtabs.Commentaires.ListCommentaire"
-        android:id="@+id/list_coms"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/rating_good"
+                    android:id="@+id/jaime"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Saisir le commentaire"
+                    android:shadowColor="@color/ColorPrimaryDark"
+                    android:id="@+id/commentaire">
+                </EditText>
+            </LinearLayout>
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:id="@+id/commentList">
 
-</RelativeLayout>
-<!-- From: file:/C:/Users/Milada/Desktop/Projet_Git/Projet_Partie_Mobile/Projet-mobile/app/src/main/res/layout/activity_post_with_comments.xml -->
+            </ListView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout><!-- From: file:/C:/Users/Milada/Desktop/Projet_Git/Projet_Partie_Mobile/Projet-mobile/app/src/main/res/layout/activity_post_with_comments.xml -->

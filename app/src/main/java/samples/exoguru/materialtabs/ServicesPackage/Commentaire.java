@@ -6,11 +6,11 @@ package samples.exoguru.materialtabs.ServicesPackage;
 public class Commentaire {
 
     private int id_commentaire;
-    private int commentaire_text;
+    private String commentaire_text;
     private int id_contenu;
     private int id_utilisateur;
 
-    public Commentaire (int id_commentaire, int commentaire_text, int id_contenu, int id_utilisateur) {
+    public Commentaire (int id_commentaire, String commentaire_text, int id_contenu, int id_utilisateur) {
         this.id_commentaire = id_commentaire;
         this.commentaire_text = commentaire_text;
         this.id_contenu = id_contenu;
@@ -24,7 +24,7 @@ public class Commentaire {
         return id_commentaire;
     }
 
-    public int getCommentaire_text () {
+    public String getCommentaire_text () {
         return commentaire_text;
     }
 
@@ -40,7 +40,7 @@ public class Commentaire {
         this.id_commentaire = id_commentaire;
     }
 
-    public void setCommentaire_text (int commentaire_text) {
+    public void setCommentaire_text (String commentaire_text) {
         this.commentaire_text = commentaire_text;
     }
 

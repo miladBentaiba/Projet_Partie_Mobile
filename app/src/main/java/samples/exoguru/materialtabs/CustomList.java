@@ -29,7 +29,7 @@ import samples.exoguru.materialtabs.Commentaires.PostWithComments;
 import samples.exoguru.materialtabs.ServicesPackage.Contenu;
 import samples.exoguru.materialtabs.ServicesPackage.ServiceInterface;
 
-public class CustomList extends ArrayAdapter<String>  {
+public class CustomList extends ArrayAdapter<Contenu>  {
 
     private ArrayList<Contenu> contenu;
 
@@ -40,7 +40,7 @@ public class CustomList extends ArrayAdapter<String>  {
 
     public CustomList(Activity context,
                       ArrayList<Contenu> contenu) {
-        super(context, R.layout.list_item_card,new String[0] );
+        super(context, R.layout.list_item_card,contenu);
         mInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.contenu = contenu;
 
@@ -91,19 +91,19 @@ public class CustomList extends ArrayAdapter<String>  {
             holder.img = (ImageView)convertView.findViewById(R.id.images);
 
             holder.nom_user.setText(
-                    ServiceInterface.getUser(
-                            contenu.get(position).getId_utilisateur()
-                    ).getNom_utilisateur());
+                    ServiceInterface.getUser(contenu.get(position).getId_utilisateur()).
+                            getNom_utilisateur());
             holder.time.setText(contenu.get(position).getDate_publication().toString());
             holder.publication.setText(contenu.get(position).getText());
             holder.menu.setOnClickListener(new OnAlbumOverflowSelectedListener(getContext()));
-            if (contenu.get(position).getType()=="Image")
+            if (contenu.get(position).getType().contains("image"))
             {
                 holder.img.setVisibility(View.VISIBLE);
                 holder.myVideoView.setVisibility(View.GONE);
+                byte[] imageByte = ServiceInterface.fileToByteArray(contenu.get(position).getFichier());
                 holder.img.setImageBitmap(
-                        BitmapFactory.decodeByteArray(contenu.get(position).getFichier(), 0,
-                                contenu.get(position).getFichier().length));
+                        BitmapFactory.decodeByteArray(imageByte, 0,
+                                imageByte.length));
             }
             else if(contenu.get(position).getType()=="Video")
             {
@@ -113,8 +113,7 @@ public class CustomList extends ArrayAdapter<String>  {
                     mediaControls = new MediaController(convertView.getContext());
                 }
                 //holder.myVideoView.setMediaController(mediaControls);
-                if(position==1)
-                {
+
                     holder.img.setVisibility(View.GONE);
                     //set the media controller buttons
 
@@ -127,12 +126,21 @@ public class CustomList extends ArrayAdapter<String>  {
                         Log.e("Error", e.getMessage());
                         e.printStackTrace();
                     }
-                }
             }
             else
             {
                 holder.img.setVisibility(View.GONE);
                 holder.img.setVisibility(View.GONE);
+            }
+
+            ImageView aimerButton = (ImageView) convertView.findViewById(R.id.jaime);
+            if (ServiceInterface.statutDejaAime(contenu.get(position).getId_contenu()))
+            {
+                aimerButton.setImageResource(R.drawable.rating_good_good);
+            }
+            else
+            {
+                aimerButton.setImageResource(R.drawable.rating_good);
             }
             convertView.setTag(holder);
         }
@@ -168,6 +176,27 @@ public class CustomList extends ArrayAdapter<String>  {
                 finalConvertView.getContext().startActivity(intent);
             }
         });
+
+        final ImageView aimerButton = (ImageView) convertView.findViewById(R.id.jaime);
+        aimerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+
+                ServiceInterface.aimer(
+                        contenu.get(position).getId_contenu(),
+                        ServiceInterface.statutDejaAime(contenu.get(position).getId_contenu()),
+                        contenu.get(position).getId_utilisateur());
+                if (ServiceInterface.statutDejaAime(contenu.get(position).getId_contenu()))
+                {
+                    aimerButton.setImageResource(R.drawable.rating_good_good);
+                }
+                else
+                {
+                    aimerButton.setImageResource(R.drawable.rating_good);
+                }
+            }
+        });
+
 
         return  convertView;
     }

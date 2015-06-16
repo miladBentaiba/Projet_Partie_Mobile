@@ -2,16 +2,49 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="match_parent"
              android:layout_height="match_parent" >
-    <TableRow>
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
         <ImageView
             android:id="@+id/img"
-            android:layout_width="50dp"
-            android:layout_height="50dp"/>
+            android:layout_width="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="30dp"/>
 
         <TextView
             android:id="@+id/txt"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp" />
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            />
+
+        <!--samples.exoguru.materialtabs.Commentaires.AutoResizeTextView
+            android:id="@+id/txt"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            /-->
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <!--samples.exoguru.materialtabs.Commentaires.AutoResizeTextView
+                android:id="@+id/txt"
+                android:layout_height="match_parent"
+                android:layout_width="100dp"
+                android:focusable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:hint="HINT"
+                android:isScrollContainer="false"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:maxLength="500"
+                android:textColor="#000000"
+                android:textSize="20sp" /-->
+        </FrameLayout>
 
     </TableRow>
 </TableLayout><!-- From: file:/C:/Users/Milada/Desktop/Projet_Git/Projet_Partie_Mobile/Projet-mobile/app/src/main/res/layout/list_commentaire.xml -->

@@ -14,9 +14,9 @@ public class Contenu {
     private String text;
     private int id_utilisateur;
     private String type;
-    private byte[] fichier;
+    private File fichier;
 
-    public Contenu (int id_contenu, Date date_publication, Date date_modification, String text, int id_utilisateur, String type, byte[] fichier) {
+    public Contenu (int id_contenu, Date date_publication, Date date_modification, String text, int id_utilisateur, String type, File fichier) {
         this.id_contenu = id_contenu;
         this.date_publication = date_publication;
         this.date_modification = date_modification;
@@ -53,7 +53,7 @@ public class Contenu {
         return type;
     }
 
-    public byte[] getFichier () {
+    public File getFichier () {
         return fichier;
     }
 
@@ -82,7 +82,7 @@ public class Contenu {
         this.type = type;
     }
 
-    public void setFichier (byte[] fichier) {
+    public void setFichier (File fichier) {
         this.fichier = fichier;
     }
 }
