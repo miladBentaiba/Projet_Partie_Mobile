@@ -9,18 +9,25 @@
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-762c6ff33fe524fa497fcab923c40a40860d57b7.jar" />
     </item>
     <item
-        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
-        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-cd3fe9d9bc26600e2357f84f6b81ffefd05de667.jar" />
-    </item>
-    <item
         jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.2.1\classes.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="4b868b833b0887aa48c4e581558eef4f1196f6a2">
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-fd93943cd8219f678a44efaff0a5faad11eb8b09.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-2ff75d9719c73d7b0dae281e33035de5ef5139b3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-8cdd6be1d7debee01f3b6617a64cdfd5313c5386.jar" />
     </item>
     <item
         jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
@@ -30,18 +37,25 @@
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-041cd0b65eb62645c75b1f6b8858dc3c46a6afef.jar" />
     </item>
     <item
-        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\classes.jar"
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.2.1\classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
-        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-801142d2a1154c17323b5d7114bf62b6ba09c3cc.jar" />
+        sha1="4b868b833b0887aa48c4e581558eef4f1196f6a2">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-41a3647cdf4414a67a15510eba0ccf3f671e1d9d.jar" />
     </item>
     <item
-        jar="C:\Users\Milada\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.1\f5aa318bda4c6c8d688c9d00b90681dcd82ce636\httpcore-4.4.1.jar"
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.3.0\classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="f5aa318bda4c6c8d688c9d00b90681dcd82ce636">
-        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\httpcore-4.4.1-8340d1a7463fc7587aab69132601c7462aeae52b.jar" />
+        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-35663bd616f92d10969221548b349ac5be07d1c1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-2f56d811ed4d3c8f59d56cdb48dbb0c032c8a933.jar" />
     </item>
     <item
         jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.3.0\classes.jar"
@@ -79,6 +93,13 @@
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-c3f8f4f34620709b77acfa995877dc7fd59959a3.jar" />
     </item>
     <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-6f7b9e06c7fc110a44ca3e666438b142f8f9f78b.jar" />
+    </item>
+    <item
         jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.3.0\classes.jar"
         jumboMode="false"
         revision="21.1.1"
@@ -93,25 +114,32 @@
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-d67cdb9e3ab3bbfd48288df83f6f380bcfca9247.jar" />
     </item>
     <item
-        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
-        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-189908bfb66925f789f71c878a98ce38671c4304.jar" />
-    </item>
-    <item
-        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
-        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-807a88c68d7a308ffa1d940cb22841386c3175f1.jar" />
-    </item>
-    <item
         jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.3.0\classes.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-29e60b969221c5b7504b5cdd4b0c9e86e5082d45.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-7fb60145551e031cd5d20637ad61eca09ba047bf.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-8807ae2083bf02714fa43bce8f69ee7e9ff225dc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-e7ffc14937d75172fe6f77909a9ee08169339888.jar" />
     </item>
     <item
         jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.3.0\classes.jar"
@@ -121,6 +149,13 @@
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-4f4f21986a3426acf8f1b50d84e8752427fd6cd9.jar" />
     </item>
     <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-d02fa0115916b6a13be2320f4c8b05806c0adf1a.jar" />
+    </item>
+    <item
         jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.1"
@@ -128,11 +163,151 @@
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-b39c6c09b0b350c8b6d6ad45c83bc5930b6da49c.jar" />
     </item>
     <item
-        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\classes.jar"
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-efb0f577de38c224023505a2b312105dfa670cc9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-fb34df5b2d659fe7bf25ed1217737fd18ea69880.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-fc1f041ba7728a4004f6fb37dfa8546df6376f0c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-cd4ce957b25147558811da2da74b0af64dc529c4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-f59c1aab17fff26b10e252a6fbc4d8ffe1e3e9f0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-74e8a85d6d3f1ccee54dbdcdaf1263be89414bcf.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="565a01f90f1529f73362707c4c185d0623a68782">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-5ac18fc49418c38fd7ecb64c622f112eff075a66.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.github.shell-software\fab\1.0.5\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="21b7e1533326a38d45ea24d04c6acfcbf8ea33af">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-51049702ff357f1f6589bfbeda246f25bbbc5706.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\classes.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
-        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-82f8c93927f7f0e342d02ab8c45d94fd171715bb.jar" />
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-8f4b07ed27a04a0fbf8084415f225936cf086502.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-240ad86df627259ffcc823c3f53e0422b0435028.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-cd3fe9d9bc26600e2357f84f6b81ffefd05de667.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-801142d2a1154c17323b5d7114bf62b6ba09c3cc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.1\f5aa318bda4c6c8d688c9d00b90681dcd82ce636\httpcore-4.4.1.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="f5aa318bda4c6c8d688c9d00b90681dcd82ce636">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\httpcore-4.4.1-8340d1a7463fc7587aab69132601c7462aeae52b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-07806b4787f9b30cd64a98da8f1b3e91c12acb92.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-55322eaeb822202fe2ed1138a31ca03b6ca4888a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-4fb24eba24c666689578a30c083b9eddaadce741.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-807a88c68d7a308ffa1d940cb22841386c3175f1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-189908bfb66925f789f71c878a98ce38671c4304.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-b2ea75cb98bf3e00268de088ea6e7ad6053fda2b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-387ac02b7c833c6860aeaadcac7ba05ad0a30a0f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-1ef8174f3cede15c2207841fe763d96af142d2f8.jar" />
     </item>
     <item
         jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
@@ -140,6 +315,13 @@
         revision="21.1.1"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-dcfefc535008be5a0185ee1ed2a97d1df474715c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-82f8c93927f7f0e342d02ab8c45d94fd171715bb.jar" />
     </item>
     <item
         jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.3.0\classes.jar"
@@ -156,18 +338,11 @@
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-d48830c0eaa19f657ae06c1af13aca01b085626e.jar" />
     </item>
     <item
-        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\classes.jar"
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.3.0\classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
-        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-cd4ce957b25147558811da2da74b0af64dc529c4.jar" />
-    </item>
-    <item
-        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
-        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-fc1f041ba7728a4004f6fb37dfa8546df6376f0c.jar" />
+        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-1c165fe5644d33272772c369b5f83449190747ac.jar" />
     </item>
     <item
         jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\classes.jar"
@@ -184,6 +359,13 @@
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-4531737189b9ebf399f387e79151bfc08447ee4f.jar" />
     </item>
     <item
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-23fdfdd0366f35b238fe13a2d21cb45b383edb3f.jar" />
+    </item>
+    <item
         jar="C:\Users\Milada\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpmime\4.3.6\cf8bacbf0d476c7f2221f861269365b66447f7ec\httpmime-4.3.6.jar"
         jumboMode="false"
         revision="21.1.1"
@@ -198,11 +380,11 @@
         <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-b6af53d1ca5f9b70f2af1baa9308b140fe63d7d9.jar" />
     </item>
     <item
-        jar="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\exploded-aar\com.github.shell-software\fab\1.0.5\classes.jar"
+        jar="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\exploded-aar\com.github.shell-software\fab\1.0.5\classes.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="21b7e1533326a38d45ea24d04c6acfcbf8ea33af">
-        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-51049702ff357f1f6589bfbeda246f25bbbc5706.jar" />
+        <dex dex="C:\Users\Milada\Desktop\Projet_Git\Projet_Partie_Mobile\Projet-mobile\app\build\intermediates\pre-dexed\debug\classes-87c1acd99093b9e5d34962ca142a1076e1e84350.jar" />
     </item>
 
 </items>

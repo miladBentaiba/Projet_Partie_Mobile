@@ -9,6 +9,8 @@ package samples.exoguru.materialtabs;
  */
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,27 +20,32 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.VideoView;
 import android.widget.MediaController;
+import android.widget.VideoView;
+
 import java.util.ArrayList;
+
+import samples.exoguru.materialtabs.Commentaires.PostWithComments;
+import samples.exoguru.materialtabs.ServicesPackage.Contenu;
+import samples.exoguru.materialtabs.ServicesPackage.ServiceInterface;
 
 public class CustomList extends ArrayAdapter<String>  {
 
-    private final String[] web;
-    private final Integer[] image;
+    private ArrayList<Contenu> contenu;
+
     private MediaController mediaControls;
     //EditText
     ArrayList<String> myItems = new ArrayList<>();
     private LayoutInflater mInflater;
 
     public CustomList(Activity context,
-                      String[] data, Integer[] image) {
-        super(context, R.layout.list_item_card, data);
+                      ArrayList<Contenu> contenu) {
+        super(context, R.layout.list_item_card,new String[0] );
         mInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        this.web = data;
-        this.image =image;
+        this.contenu = contenu;
 
-        for (int i=0; i<data.length; i++)
+
+        for (int i=0; i<contenu.size(); i++)
         {
             myItems.add("");
         }
@@ -63,12 +70,13 @@ public class CustomList extends ArrayAdapter<String>  {
         TextView time;
         TextView publication;
         ImageView menu;
-        //VideoView myVideoView;
+        VideoView myVideoView;
         ImageView img;
+
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if(convertView == null)
         {
@@ -79,36 +87,53 @@ public class CustomList extends ArrayAdapter<String>  {
             holder.time = (TextView) convertView.findViewById(R.id.time);
             holder.publication = (TextView) convertView.findViewById(R.id.text);
             holder.menu = (ImageView) convertView.findViewById(R.id.menu);
-            //holder.myVideoView = (VideoView) convertView.findViewById(R.id.video_view);
+            holder.myVideoView = (VideoView) convertView.findViewById(R.id.video_view);
             holder.img = (ImageView)convertView.findViewById(R.id.images);
-            holder.nom_user.setText(web[position]);
-            holder.time.setText(web[position]);
-            holder.publication.setText(web[position]);
+
+            holder.nom_user.setText(
+                    ServiceInterface.getUser(
+                            contenu.get(position).getId_utilisateur()
+                    ).getNom_utilisateur());
+            holder.time.setText(contenu.get(position).getDate_publication().toString());
+            holder.publication.setText(contenu.get(position).getText());
             holder.menu.setOnClickListener(new OnAlbumOverflowSelectedListener(getContext()));
-            holder.img.setImageResource(image[position]);
-            if (mediaControls == null) {
-                mediaControls = new MediaController(convertView.getContext());
+            if (contenu.get(position).getType()=="Image")
+            {
+                holder.img.setVisibility(View.VISIBLE);
+                holder.myVideoView.setVisibility(View.GONE);
+                holder.img.setImageBitmap(
+                        BitmapFactory.decodeByteArray(contenu.get(position).getFichier(), 0,
+                                contenu.get(position).getFichier().length));
             }
-            //holder.myVideoView.setMediaController(mediaControls);
-            if(position==1)
+            else if(contenu.get(position).getType()=="Video")
             {
                 holder.img.setVisibility(View.GONE);
-                //set the media controller buttons
+                holder.myVideoView.setVisibility(View.VISIBLE);
+                if (mediaControls == null) {
+                    mediaControls = new MediaController(convertView.getContext());
+                }
+                //holder.myVideoView.setMediaController(mediaControls);
+                if(position==1)
+                {
+                    holder.img.setVisibility(View.GONE);
+                    //set the media controller buttons
 
-                //initialize the VideoView
-                try {
-                    //set the uri of the add_video to be played
-                    /*holder.myVideoView.setVideoURI(Uri.parse("android.resource://" +
-                            convertView.getContext().getPackageName() + "/" + R.raw.avion));*/
-                } catch (Exception e) {
-                    Log.e("Error", e.getMessage());
-                    e.printStackTrace();
+                    //initialize the VideoView
+                    try {
+                        //set the uri of the add_video to be played
+                    holder.myVideoView.setVideoURI(Uri.parse("android.resource://" +
+                            convertView.getContext().getPackageName() + "/" + R.raw.avion));
+                    } catch (Exception e) {
+                        Log.e("Error", e.getMessage());
+                        e.printStackTrace();
+                    }
                 }
             }
-           /* else
+            else
             {
-                holder.myVideoView.setVisibility(View.GONE);
-            }*/
+                holder.img.setVisibility(View.GONE);
+                holder.img.setVisibility(View.GONE);
+            }
             convertView.setTag(holder);
         }
         else
@@ -121,7 +146,7 @@ public class CustomList extends ArrayAdapter<String>  {
 
 
 
-        //we need to update adapter once we finish with editing
+       /* //we need to update adapter once we finish with editing
         holder.commentaire.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             public void onFocusChange (View v, boolean hasFocus) {
                 if (!hasFocus) {
@@ -129,6 +154,18 @@ public class CustomList extends ArrayAdapter<String>  {
                     final EditText Caption = (EditText) v;
                     web[position] = Caption.getText().toString();
                 }
+            }
+        });*/
+
+
+        ImageView commenterButton = (ImageView) convertView.findViewById(R.id.commenter);
+        final View finalConvertView = convertView;
+        commenterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                Intent intent = new Intent(getContext(), PostWithComments.class);
+                intent.putExtra("idPost", contenu.get(position).getId_utilisateur());
+                finalConvertView.getContext().startActivity(intent);
             }
         });
 

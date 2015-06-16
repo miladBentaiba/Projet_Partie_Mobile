@@ -17,8 +17,10 @@
 
     </ListView>
 
+
+
     <requestFocus
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-</RelativeLayout><!-- From: file:/C:/Users/Milada/Desktop/Projet_Git/Projet-mobile/app/src/main/res/layout/tab_1.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Milada/Desktop/Projet_Git/Projet_Partie_Mobile/Projet-mobile/app/src/main/res/layout/tab_1.xml -->

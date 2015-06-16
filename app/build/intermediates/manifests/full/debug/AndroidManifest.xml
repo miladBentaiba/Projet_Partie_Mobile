@@ -42,6 +42,10 @@
             android:label="Publier_status" >
         </activity>
         <activity
+            android:name="samples.exoguru.materialtabs.Commentaires.PostWithComments"
+            android:label="@string/title_activity_post_with_comments" >
+        </activity>
+        <activity
             android:name="android.support.v7.widget.TestActivity"
             android:label="RecyclerViewTestActivity" />
 

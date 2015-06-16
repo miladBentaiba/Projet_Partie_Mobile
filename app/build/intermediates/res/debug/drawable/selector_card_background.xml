@@ -6,4 +6,4 @@
         android:drawable="@drawable/layer_card_background_selected" />
 
     <item android:drawable="@drawable/layer_card_background" />
-</selector><!-- From: file:/C:/Users/Milada/Desktop/Projet_Git/Projet-mobile/app/src/main/res/drawable/selector_card_background.xml -->
+</selector><!-- From: file:/C:/Users/Milada/Desktop/Projet_Git/Projet_Partie_Mobile/Projet-mobile/app/src/main/res/drawable/selector_card_background.xml -->

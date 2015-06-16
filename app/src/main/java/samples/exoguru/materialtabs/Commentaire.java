@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Commentaire.OnFragmentInteractionListener} interface
+ * {@link Commentaires.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Commentaire#newInstance} factory method to
+ * Use the {@link Commentaires#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class Commentaire extends Fragment {

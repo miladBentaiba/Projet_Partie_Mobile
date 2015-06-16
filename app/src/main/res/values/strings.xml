@@ -67,4 +67,5 @@
 
     <string name="openDrawer">Open </string>
     <string name="closeDrawer">Close</string>
+    <string name="title_activity_post_with_comments">PostWithComments</string>
 </resources>
