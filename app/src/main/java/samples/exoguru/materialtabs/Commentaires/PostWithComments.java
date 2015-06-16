@@ -72,7 +72,8 @@ public class PostWithComments extends ActionBarActivity {
                         getNom_utilisateur());
         time.setText(c.getDate_publication().toString());
         publication.setText(c.getText());
-        menu.setOnClickListener(new OnAlbumOverflowSelectedListener(this));
+        menu.setOnClickListener(new OnAlbumOverflowSelectedListener(PostWithComments.this,
+                ServiceInterface.getContenu(id_post)));
         if (c.getType()=="Image")
         {
             img.setVisibility(View.VISIBLE);

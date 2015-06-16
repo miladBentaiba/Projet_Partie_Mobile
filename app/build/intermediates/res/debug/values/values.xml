@@ -404,6 +404,7 @@ available. Please contact the developer for assistance.</string>
     <!-- From: file:/C:/Users/Milada/Desktop/Projet_Git/Projet_Partie_Mobile/Projet-mobile/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title_activity_add_status">AddStatusActivity</string>
+    <string name="title_activity_modifier_post">ModifierPost</string>
     <string name="title_activity_post_with_comments">PostWithComments</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
     <string name="unknown_person">Unknown</string>

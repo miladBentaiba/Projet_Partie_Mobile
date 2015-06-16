@@ -95,7 +95,8 @@ public class CustomList extends ArrayAdapter<Contenu>  {
                             getNom_utilisateur());
             holder.time.setText(contenu.get(position).getDate_publication().toString());
             holder.publication.setText(contenu.get(position).getText());
-            holder.menu.setOnClickListener(new OnAlbumOverflowSelectedListener(getContext()));
+            holder.menu.setOnClickListener(new OnAlbumOverflowSelectedListener(getContext(),
+                    contenu.get(position)));
             if (contenu.get(position).getType().contains("image"))
             {
                 holder.img.setVisibility(View.VISIBLE);
@@ -181,6 +182,7 @@ public class CustomList extends ArrayAdapter<Contenu>  {
         aimerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
+
 
                 ServiceInterface.aimer(
                         contenu.get(position).getId_contenu(),

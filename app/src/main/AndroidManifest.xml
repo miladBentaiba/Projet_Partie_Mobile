@@ -39,6 +39,10 @@
             android:name=".Commentaires.PostWithComments"
             android:label="@string/title_activity_post_with_comments" >
         </activity>
+        <activity
+            android:name=".ModifierPost"
+            android:label="@string/title_activity_modifier_post" >
+        </activity>
     </application>
 
 </manifest>
