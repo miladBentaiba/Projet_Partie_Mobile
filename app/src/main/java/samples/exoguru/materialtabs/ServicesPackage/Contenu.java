@@ -1,6 +1,7 @@
 package samples.exoguru.materialtabs.ServicesPackage;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -16,10 +17,51 @@ public class Contenu {
     private String type;
     private File fichier;
 
-    public Contenu (int id_contenu, Date date_publication, Date date_modification, String text, int id_utilisateur, String type, File fichier) {
+
+    private ArrayList<Commentaire> commentsList =null ;
+
+    private ArrayList<Integer> listLikesID =null ;
+    private boolean liked = false;
+
+    public ArrayList<Integer> getListLikesID () {
+        return listLikesID;
+    }
+
+    public void setListLikesID (ArrayList<Integer> listLikesID) {
+        this.listLikesID = listLikesID;
+    }
+
+    public ArrayList<Commentaire> getCommentsList () {
+        return commentsList;
+    }
+
+    public void setCommentsList (ArrayList<Commentaire> commentsList) {
+        this.commentsList = commentsList;
+    }
+
+    public boolean isLiked () {
+        return liked;
+    }
+
+    public void setLiked (boolean liked) {
+        this.liked = liked;
+    }
+
+    public Contenu (int id_contenu, Date date_publication, Date date_modification, String text,
+                    int id_utilisateur, String type, File fichier) {
         this.id_contenu = id_contenu;
         this.date_publication = date_publication;
         this.date_modification = date_modification;
+        this.text = text;
+        this.id_utilisateur = id_utilisateur;
+        this.type = type;
+        this.fichier = fichier;
+    }
+
+
+    public Contenu (Date date_publication, String text,
+                    int id_utilisateur, String type, File fichier) {
+        this.date_publication = date_publication;
         this.text = text;
         this.id_utilisateur = id_utilisateur;
         this.type = type;

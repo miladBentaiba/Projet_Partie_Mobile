@@ -10,11 +10,13 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.MediaController;
@@ -26,6 +28,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Calendar;
+import java.util.Date;
+
+import samples.exoguru.materialtabs.ServicesPackage.Contenu;
+import samples.exoguru.materialtabs.UserSession.AppControler;
+import samples.exoguru.materialtabs.UserSession.User;
 
 
 public class PublierStatut extends ActionBarActivity {
@@ -38,6 +46,11 @@ public class PublierStatut extends ActionBarActivity {
     TextView utilisateur;
     TextView time;
     TextView contenu;
+    Button publier  ;
+    EditText textAPublier;
+    String type = "Text";
+
+    File file = null ;
 
 
     @Override
@@ -45,6 +58,34 @@ public class PublierStatut extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_publier_statut);
 
+        textAPublier = (EditText) findViewById(R.id.statut_added);
+
+
+
+
+        publier = (Button) findViewById(R.id.publier);
+        publier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+
+
+                Calendar c = Calendar.getInstance() ;
+                Time t = new Time();
+                t.setToNow();
+                c.getTimeInMillis();
+
+                Date d = new Date(t.toMillis(true));
+
+
+                Contenu content =new Contenu(d,textAPublier.getText().toString(),
+                        Integer.parseInt(User.getInstance().getID()), type , file );
+
+               //Tab1.adapter.contenu.add(content);
+              //  AppControler.getInstance().addContent(content);
+                finish();
+
+            }
+        });
         video = (VideoView)findViewById(R.id.video_view);
         if (mediaControls == null) {
             mediaControls = new MediaController(this);
@@ -60,19 +101,20 @@ public class PublierStatut extends ActionBarActivity {
                 startActivityForResult(pickIntent, 3);
                 PublierStatut.this.img.setVisibility(View.GONE);
                 PublierStatut.this.video.setVisibility(View.VISIBLE);
-
             }
         });
 
         img = (ImageView)findViewById(R.id.pic);
-        img.setImageResource(R.drawable.deux);
-
+        img.setVisibility(View.GONE);
+        video.setVisibility(View.GONE);
         add_picture = (ImageView)findViewById(R.id.add_pic);
         add_picture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
-                selectImage();
 
+                selectImage();
+                img.setVisibility(View.VISIBLE);
+                video.setVisibility(View.GONE);
             }
         });
 
@@ -105,6 +147,7 @@ public class PublierStatut extends ActionBarActivity {
                 {
                     Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                     File f = new File(Environment.getExternalStorageDirectory(), "temp.jpg");
+                    type="image/jpej";
                     intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
                     startActivityForResult(intent, 1);
                     PublierStatut.this.video.setVisibility(View.GONE);
@@ -117,6 +160,8 @@ public class PublierStatut extends ActionBarActivity {
                     PublierStatut.this.img.setVisibility(View.VISIBLE);
                 } else if (options[item].equals("Cancel")) {
                     dialog.dismiss();
+                    img.setVisibility(View.GONE);
+                    video.setVisibility(View.GONE);
                 }
             }
         });
@@ -128,10 +173,11 @@ public class PublierStatut extends ActionBarActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             if (requestCode == 1) {
-                File f = new File(Environment.getExternalStorageDirectory().toString());
-                for (File temp : f.listFiles()) {
+                file = new File(Environment.getExternalStorageDirectory().toString());
+                type = "image/jpeg";
+                for (File temp : file.listFiles()) {
                     if (temp.getName().equals("temp.jpg")) {
-                        f = temp;
+                        file = temp;
                         break;
                     }
                 }
@@ -139,18 +185,18 @@ public class PublierStatut extends ActionBarActivity {
                     Bitmap bitmap;
                     BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
 
-                    bitmap = BitmapFactory.decodeFile(f.getAbsolutePath(),
+                    bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(),
                             bitmapOptions);
-
                     img.setImageBitmap(bitmap);
 
                     String path = Environment
                             .getExternalStorageDirectory()
                             + File.separator
                             + "Phoenix" + File.separator + "default";
-                    f.delete();
+                   // f.delete();
                     OutputStream outFile = null;
                     File file = new File(path, String.valueOf(System.currentTimeMillis()) + ".jpg");
+                    type="image/jpeg";
                     try {
                         outFile = new FileOutputStream(file);
                         bitmap.compress(Bitmap.CompressFormat.JPEG, 85, outFile);
@@ -170,17 +216,20 @@ public class PublierStatut extends ActionBarActivity {
 
                 Uri selectedImage = data.getData();
                 String[] filePath = { MediaStore.Images.Media.DATA };
-                Cursor c = getContentResolver().query(selectedImage,filePath, null, null, null);
+                Cursor c = getContentResolver().query(selectedImage, filePath, null, null, null);
                 c.moveToFirst();
                 int columnIndex = c.getColumnIndex(filePath[0]);
                 String picturePath = c.getString(columnIndex);
                 c.close();
                 Bitmap thumbnail = (BitmapFactory.decodeFile(picturePath));
+                file = new File(picturePath);
                 Log.w("path", picturePath + "");
                 img.setImageBitmap(thumbnail);
             }else if(requestCode == 3)
             {
                 Uri selectedVideo = data.getData();
+                file = new File(selectedVideo.getPath());
+                type = "video/";
                 Uri mVideoURI = data.getData();
                 video.setVideoURI(mVideoURI);
                 /*String[] filePath = { MediaStore.Images.Media.DATA };

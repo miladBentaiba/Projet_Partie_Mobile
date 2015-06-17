@@ -32,7 +32,7 @@ import java.io.UnsupportedEncodingException;
 public class Reader extends AsyncTask<String, Void, Publication> {
     private IHolder holder;
 
-    public String URL ="http://192.168.173.206:8080/StatusService/api/";
+    public String URL ="http://192.168.219.101:8080/StatusService/api/";
 
     public static String action ="";
 

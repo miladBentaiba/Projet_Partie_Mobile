@@ -8,15 +8,13 @@ package samples.exoguru.materialtabs;
  * Created by Milada on 01/05/2015.
  */
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,30 +27,42 @@ import samples.exoguru.materialtabs.Commentaires.PostWithComments;
 import samples.exoguru.materialtabs.ServicesPackage.Contenu;
 import samples.exoguru.materialtabs.ServicesPackage.ServiceInterface;
 
-public class CustomList extends ArrayAdapter<Contenu>  {
+public class CustomList extends BaseAdapter {
 
-    private ArrayList<Contenu> contenu;
+   public ArrayList<Contenu> contenu ;//= ArrayList<>;
 
     private MediaController mediaControls;
+
     //EditText
     ArrayList<String> myItems = new ArrayList<>();
     private LayoutInflater mInflater;
 
     public CustomList(Activity context,
                       ArrayList<Contenu> contenu) {
-        super(context, R.layout.list_item_card,contenu);
-        mInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        super();
+        mInflater = LayoutInflater.from(context);
+
         this.contenu = contenu;
 
 
-        for (int i=0; i<contenu.size(); i++)
+        for (int i=0; i<myItems.size(); i++)
         {
             myItems.add("");
         }
         notifyDataSetChanged();
     }
     public int getCount() {
-        return myItems.size();
+        return contenu.size();
+    }
+
+    @Override
+    public Object getItem (int position) {
+        return contenu.get(position);
+    }
+
+    @Override
+    public long getItemId (int position) {
+        return position;
     }
 
     /*@Override
@@ -76,7 +86,7 @@ public class CustomList extends ArrayAdapter<Contenu>  {
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, final ViewGroup parent) {
         ViewHolder holder;
         if(convertView == null)
         {
@@ -95,18 +105,28 @@ public class CustomList extends ArrayAdapter<Contenu>  {
                             getNom_utilisateur());
             holder.time.setText(contenu.get(position).getDate_publication().toString());
             holder.publication.setText(contenu.get(position).getText());
-            holder.menu.setOnClickListener(new OnAlbumOverflowSelectedListener(getContext(),
+            Log.w("service", "user to call: " + contenu.get(position).getId_utilisateur());
+            holder.menu.setOnClickListener(new OnAlbumOverflowSelectedListener(parent.getContext(),
                     contenu.get(position)));
+
+            Log.w("service", "type: " + contenu.get(position).getType() + " \nposition: " + position);
+            Log.w("service", "contains or not: "+contenu.get(position).getType().contains("image"));
+
+
             if (contenu.get(position).getType().contains("image"))
             {
                 holder.img.setVisibility(View.VISIBLE);
                 holder.myVideoView.setVisibility(View.GONE);
-                byte[] imageByte = ServiceInterface.fileToByteArray(contenu.get(position).getFichier());
+
+                /*byte[] imageByte = ServiceInterface.fileToByteArray(contenu.get(position).getFichier());
+                File imageAAfficher =contenu.get(position).getFichier();
                 holder.img.setImageBitmap(
-                        BitmapFactory.decodeByteArray(imageByte, 0,
-                                imageByte.length));
-            }
-            else if(contenu.get(position).getType()=="Video")
+                        BitmapFactory.decodeFile(imageAAfficher);*/
+
+
+
+
+            } else if(contenu.get(position).getType()=="Video")
             {
                 holder.img.setVisibility(View.GONE);
                 holder.myVideoView.setVisibility(View.VISIBLE);
@@ -172,7 +192,7 @@ public class CustomList extends ArrayAdapter<Contenu>  {
         commenterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
-                Intent intent = new Intent(getContext(), PostWithComments.class);
+                Intent intent = new Intent(parent.getContext(), PostWithComments.class);
                 intent.putExtra("idPost", contenu.get(position).getId_utilisateur());
                 finalConvertView.getContext().startActivity(intent);
             }
@@ -202,4 +222,10 @@ public class CustomList extends ArrayAdapter<Contenu>  {
 
         return  convertView;
     }
+
+    public void addContent(Contenu c)
+    {
+        contenu.add(c);
+    }
+
 }

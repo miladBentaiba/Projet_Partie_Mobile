@@ -22,7 +22,7 @@
             android:orientation="horizontal">
             <ImageView
                 android:layout_width="50dp"
-                android:src="@drawable/un"
+                android:src="@drawable/photo"
                 android:layout_height="50dp"/>
             <LinearLayout
                 android:layout_width="wrap_content"

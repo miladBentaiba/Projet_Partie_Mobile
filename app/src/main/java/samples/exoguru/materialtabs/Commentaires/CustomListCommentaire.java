@@ -37,7 +37,7 @@ public class CustomListCommentaire extends ArrayAdapter<Commentaire>{
         ImageView imageView = (ImageView) rowView.findViewById(R.id.img);
         txtTitle.setText(coms.get(position).getCommentaire_text());
 
-        imageView.setImageResource(R.drawable.un);
+        imageView.setImageResource(R.drawable.photo);
         return rowView;
     }
 }

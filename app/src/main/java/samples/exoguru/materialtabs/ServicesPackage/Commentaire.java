@@ -1,5 +1,7 @@
 package samples.exoguru.materialtabs.ServicesPackage;
 
+import java.util.ArrayList;
+
 /**
  * Created by Milada on 27/05/2015.
  */
@@ -9,6 +11,25 @@ public class Commentaire {
     private String commentaire_text;
     private int id_contenu;
     private int id_utilisateur;
+
+    private ArrayList<Integer> listLikesID ;
+    private boolean liked ;
+
+    public ArrayList<Integer> getListLikesID () {
+        return listLikesID;
+    }
+
+    public void setListLikesID (ArrayList<Integer> listLikesID) {
+        this.listLikesID = listLikesID;
+    }
+
+    public boolean isLiked () {
+        return liked;
+    }
+
+    public void setLiked (boolean liked) {
+        this.liked = liked;
+    }
 
     public Commentaire (int id_commentaire, String commentaire_text, int id_contenu, int id_utilisateur) {
         this.id_commentaire = id_commentaire;

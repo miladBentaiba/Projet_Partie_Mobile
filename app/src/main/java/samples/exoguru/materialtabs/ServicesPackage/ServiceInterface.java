@@ -1,6 +1,8 @@
 package samples.exoguru.materialtabs.ServicesPackage;
 
+import android.os.StrictMode;
 import android.util.Base64;
+import android.util.Log;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -35,7 +37,7 @@ import java.util.Date;
  */
 public class ServiceInterface {
 
-    private static final String adresseSrv="192.168.173.206";
+    private static final String adresseSrv="192.168.219.101";
 
     public static void publier (Contenu content)
     {
@@ -125,7 +127,7 @@ public class ServiceInterface {
             jsonObject.put("bool",like);
             StringEntity se = new StringEntity(jsonObject.toString());
             se.setContentType("application/json;charset=UTF-8");
-            se.setContentEncoding(new BasicHeader(HTTP.CONTENT_TYPE,"application/json;charset=UTF-8"));
+            se.setContentEncoding(new BasicHeader(HTTP.CONTENT_TYPE, "application/json;charset=UTF-8"));
             req.setEntity(se);
             HttpClient client=new DefaultHttpClient();
             HttpResponse httpresponse = client.execute(req);
@@ -193,7 +195,7 @@ public class ServiceInterface {
         HttpPost req = new HttpPost("http://"+adresseSrv+":8080/StatusService/api/contenu/moderer");
         JSONObject jsonObject=new JSONObject();
         try {
-            jsonObject.put("accepter",accept);
+            jsonObject.put("accepter", accept);
             jsonObject.put("contenu_id",id_content);
             StringEntity se = new StringEntity(jsonObject.toString());
             se.setContentType("application/json;charset=UTF-8");
@@ -214,6 +216,8 @@ public class ServiceInterface {
 
     public static ArrayList<Contenu> getMur()
     {
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         HttpClient httpclient = new DefaultHttpClient();
 
         HttpGet request = new HttpGet();
@@ -232,19 +236,28 @@ public class ServiceInterface {
             ArrayList<Contenu> listContenu=new ArrayList<Contenu>();
             for(int i=0;i<finalResult.length();i++){
                 JSONObject jsonObject=finalResult.getJSONObject(i);
+                Log.w("service","json: "+jsonObject.toString() );
                 Contenu cntenu=new Contenu();
                 cntenu.setDate_modification(new Date(jsonObject.getLong("contenu_date_modification")));
                 cntenu.setDate_publication(new Date(jsonObject.getLong("contenu_date_publication")));
                 cntenu.setId_contenu(jsonObject.getInt("contenu_cle"));
-                cntenu.setId_utilisateur(jsonObject.getInt("contenu_cle_utilisateur"));
+                cntenu.setId_utilisateur(jsonObject.getInt("cle_utilisateur"));
                 cntenu.setText(jsonObject.getString("contenu_text"));
                 cntenu.setType(jsonObject.getString("contenu_type"));
-                byte[] data= Base64.decode(jsonObject.getString("contenu_binaire"),Base64.DEFAULT);
-                File fichier=new File(Integer.toString(jsonObject.getInt("contenu_cle")));
-                FileOutputStream fos = new FileOutputStream(fichier);
-                fos.write(data);
-                fos.close();
-                cntenu.setFichier(fichier);
+
+                Log.w("service", "content_binaire: "+jsonObject.getString("contenu_binaire"));
+                if (!jsonObject.getString("contenu_binaire").equals("null"))
+                {
+                    byte[] data= Base64.decode(jsonObject.getString("contenu_binaire"),Base64.DEFAULT);
+                    File fichier=new File(Integer.toString(jsonObject.getInt("contenu_cle")));
+                    FileOutputStream fos = new FileOutputStream(fichier);
+                    fos.write(data);
+                    fos.close();
+                    cntenu.setFichier(fichier);
+                }else{
+                    cntenu.setFichier(null);
+                }
+
                 listContenu.add(cntenu);
             }
             return listContenu;
@@ -320,7 +333,7 @@ public class ServiceInterface {
         URI website = null;
 
         try {
-            website = new URI("http://"+adresseSrv+":8080/StatusService/api/contenu/utilisateur_like?id_contenu="+id_contenu);
+            website = new URI("http://"+adresseSrv+":8080/StatusService/api/contenu/utilisateur_like?id_contenu="+ id_contenu);
             request.setURI(website);
             HttpResponse response = httpclient.execute(request);
             BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));

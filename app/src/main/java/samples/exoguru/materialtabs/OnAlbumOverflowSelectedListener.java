@@ -33,6 +33,7 @@ public class OnAlbumOverflowSelectedListener implements View.OnClickListener {
        PopupMenu popupMenu = new PopupMenu(mContext, v) {
             @Override
             public boolean onMenuItemSelected(MenuBuilder menu, MenuItem item) {
+                Log.w("service","user called: "+ contenu.getId_utilisateur());
                 switch (item.getItemId()) {
                     case R.id.suivre:
                        suivre(contenu.getId_utilisateur());

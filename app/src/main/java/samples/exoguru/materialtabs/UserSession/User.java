@@ -54,7 +54,7 @@ public class User {
         return instance ;
     }
     private User(String ID , String name , String mail , String imageUrl , String token ) {
-        this.ID = ID;
+        this.ID = "1";
         this.mail =mail ;
         this.name = name ;
         this.imageUrl = imageUrl ;
